@@ -28,6 +28,7 @@
     "eslint": "^7.6.0",
     "jest": "^26.3.0",
     "metro-react-native-babel-preset": "^0.62.0",
+    "react-native-eject": "^0.1.2",
     "react-test-renderer": "16.13.1"
   },
   "jest": {
