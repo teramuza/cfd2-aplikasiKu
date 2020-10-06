@@ -1,8 +1,10 @@
 // @flow
 
 import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
 import {NavigationProp} from '@react-navigation/native';
+import {AppStatusBar} from '../../Components';
+import {Colors} from '../../Themes/Colors';
 
 type Props = {
   navigation: NavigationProp,
@@ -18,7 +20,8 @@ const DetailsScreen = ({navigation}: Props) => {
   const {name, age} = state;
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text onPress={() => setState({...state, age: age + 1})}>
+      <AppStatusBar backgroundColor={Colors.BLACK} barStyle="light-content" />
+      <Text onPress={() => setState({...state, age: age + 1})} style={{fontSize: 30}}>
         {name + ' (' + age + ')'}
       </Text>
     </View>

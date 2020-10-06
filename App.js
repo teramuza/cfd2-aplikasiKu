@@ -7,21 +7,18 @@
  */
 
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {HomeScreen, DetailsScreen} from './src/Screens/ScreensConfig';
-import Routes from './src/Routes/Routes';
-
-const Stack = createStackNavigator();
+import {SafeAreaView} from 'react-native';
+import RootNavigation from './src/Routes/Navigation';
+import {AppStatusBar} from './src/Components';
+import {Colors} from './src/Themes/Colors';
 
 const App: () => React$Node = () => {
+  const APP_THEME = Colors.WHITE;
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName={Routes.Home}>
-        <Stack.Screen name={Routes.Home} component={HomeScreen} />
-        <Stack.Screen name={Routes.Details} component={DetailsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaView style={{flex: 1, backgroundColor: APP_THEME}}>
+      <AppStatusBar backgroundColor={APP_THEME} barStyle="dark-content" />
+      <RootNavigation />
+    </SafeAreaView>
   );
 };
 
