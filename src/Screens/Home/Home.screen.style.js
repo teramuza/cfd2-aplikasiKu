@@ -8,16 +8,44 @@ const Styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     backgroundColor: '#2b2b2b',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
   },
   banner: {
-    width: '20%',
-    height: 50,
+    width: '100%',
+    height: '100%',
     resizeMode: 'stretch',
   },
   content: {
     flex: 2,
-    backgroundColor: '#6b6b6b',
+    backgroundColor: '#e2e2e2',
+    paddingVertical: 15,
+  },
+  flatlistCard: {
+    paddingStart: 18,
+  },
+  card: {
+    width: 220,
+    height: 170,
+    marginHorizontal: 5,
+    backgroundColor: '#fbfbfb',
+    borderRadius: 8,
+    overflow: 'hidden',
+    elevation: 1,
+  },
+  cardBanner: {
+    width: '100%',
+    height: 100,
+    resizeMode: 'stretch',
+  },
+  contentText: {
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+  textCardTitle: {
+    fontWeight: 'bold',
+  },
+  textCard: {
+    color: '#434343',
   },
 });
 
